@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Times New Roman;
+}
+.beijingtu{
+    background: url("logo_top.png")no-repeat center center;
+    width: 50px;
+    height: 100px;
+ }
+.baner_x{
+    width:1226px;
+    height:100px;
+}
+.wdgwc{
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 24px;
+    float:left;
+}
+.wxts{
+    height:90px;
+    line-height: 105px;
+    font-size:12px;
+    color: #777;
+}
+.dlzc{
+    height:100px;
+    line-height:100px;
+    font-size:12px;
+
+}
+.dlzc span>a:hover{color:#ff6700; }
+.dlzc span>a{color: #777;font-family:"Times New Roman"; padding: 0 8px;}
+.border-bottom {
+    border-bottom: 2px solid #ff6700 !important;
+}
+.gwcxd{
+    background: #fff;
+    width: 1226px;
+    height: auto;
+    padding-top: 30px;
+}
+.gwcxqbj{
+    width: 100%;
+    height: 400px;
+    background: rgb(245,245,245);
+}
+.top{
+    width: 1226px;
+    height: 70px;
+}
+.quanxuan{
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    background: none;
+}
+.sub_top{
+    width: 225px;
+    height: 70px;
+    line-height: 36px;
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+.m1{margin-left: 100px !important;}
+.m2{margin-left: 300px !important;}
+.m3{margin-left:140px !important;}
+.m5{margin-left:140px !important; }
+.btn-danger{background-color:#ff6700;}

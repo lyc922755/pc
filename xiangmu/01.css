@@ -1,0 +1,140 @@
+#d1{
+    width:100%;
+    height:40px;
+    background:#333;
+}
+
+*{margin:0;padding:0; text-decoration: none;list-style-type: none;}
+#header,#nav{
+    width:100%;
+    margin:0 auto;
+    height:40px;
+
+}
+.header-top-header,.right-d{
+    display:flex;
+    justify-content:space-between;
+    color:#b0b0b0;
+}
+#header a{
+    font-size:12px;
+    color:#b0b0b0;
+
+}
+#header ul li a:hover{
+    color:#fff;
+
+}
+
+.header-top{
+    height:40px;
+    width:612px;
+    line-height: 40px;
+    float:left;
+}
+#right{
+    width:220px;
+    height:40px;
+    float:right;
+    margin-right:10px;
+}
+.right-d a{
+    font-size:12px;
+    color:#b0b0b0;
+}
+.right-d a:hover{
+    color:#fff;
+}
+.right-d{
+    padding:10px 0px;
+}
+.right-a{
+    background:#ff6700;
+    width:120px;
+    height:40px;
+    text-align: center;
+    font-size: 12px;
+    float:right;
+    color: #fff;
+    line-height: 40px;
+}
+.left_hight{height:54px;}
+#nav{
+    width:100%;
+    height:58px;
+    margin: 0 auto;
+
+}
+.nav-1,.nav-2{
+    float:left;
+}
+.nav-2{height:100px;}
+.nav-3{padding:20px;margin-right:20px;float:left;}
+span>a{color:#000;}
+span>a:hover{color: rgb(255,103,0);}
+.nav-4{width:264px;
+    height:54px;
+    float:left;
+
+}
+.nav-5{
+    text-align: center;
+    width: 50px;
+    height: 54px;
+    background: none;
+}
+li>a{color:#fff;}
+li:hover{
+    background:red;
+}
+li:hover+.nav—left{
+    background:red;
+    display: inline-block;
+}
+.nav-6{
+    width:100%;
+    height: 460px;
+    background-size:100%;
+    background-image: url('UlB.jpg');
+}
+.nav-7{width:173px;
+    height:460px;
+}
+.nav-7 li{
+    float:left;
+    display: block;
+    width: 174px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;  }
+/*.nav-8{float:left;*/
+/*}*/
+/*-----1¥-------*/
+.daotu_height{height:201.6px;}
+p.font_size{color:rgb(176,176,176);
+     font-size:12px;}
+/*---2¥*/
+.tu_top_size{
+    width:23%;height:9%;
+    background: #aaaaaa;
+    border-radius:0.25rem;
+}
+.my_img_position{
+    transition:transform 1s;
+
+}
+.my_img_position:hover{
+    transform:scale(1.1);
+}
+div.xianshi>div{display:none !important;}
+.xianshi:hover div{display:block !important;top:222px; font-size:18px; background-color: #ff6700;
+    }
+.xianshi:hover div a{text-decoration: none;}
+div.nav—left:hover{display:none !important;}
+div.nav—left{display:none !important;
+    width: 800px;
+    height: 460px;
+    position: absolute;top:98px;left:570px;background: #fff;}
+.nav-left1:hover>.nav—left{display:block !important;background: #fff; }
+
+div{display:block;}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 设置视口-->
+    <meat name="viewport" conter="width=device-width,initial-scale=1">
+        <!-- 导入CSS-->
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <!-- 导入JS-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="gouwuche.css"/>
+</head>
+<body>
+<div class="baner_x m-auto ">
+      <a href="01.html" class="float-left">
+          <div class="beijingtu"></div>
+      </a>
+      <div  class="wdgwc float-left ml-4">我的购物车</div>
+      <div class="float-left wxts ml-3">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</div>
+      <div class="dlzc float-right">
+          <span><a href="login.html">登录</a></span>
+          <span>|</span>
+          <span><a href="register.html">注册</a></span>
+      </div>
+</div>
+<div class="border-bottom"></div>
+<div class="gwcxqbj pb-3 bg-white">
+    <div class="gwcxd m-auto">
+        <div class="top m-auto">
+            <div class="sud_top float-left">
+                <table id="data" class="bg-white" >
+                    <thead class="">
+                    <tr>
+                        <th><input type="checkbox"/>全选</th>
+                        <th class=" sub_top">商品名称</th>
+                        <th class=" sub_top">单价</th>
+                        <th class=" sub_top">数量</th>
+                        <th class=" sub_top">小计</th>
+                        <th class=" sub_top">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-top">
+                        <td><input type="checkbox"/></td>
+                        <td><img src="gwc_xiaomi6.jpg" alt=""/><span>小米6全网通6GB内存+64GB 亮黑色</span></td>
+                        <td>¥4488.00</td>
+                        <td>
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </td>
+                        <td>¥4488.00</td>
+                        <td><button>×</button></td>
+                    </tr>
+                    <tr class="border-top ">
+                        <td><input type="checkbox"/></td>
+                        <td><img src="gwc_xiaomi6.jpg" alt=""/><a href="#">小米6全网通6GB内存+64GB 亮黑色</a></td>
+                        <td>¥5288.00</td>
+                        <td>
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </td>
+                        <td>¥5288.00</td>
+                        <td><button>×</button></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="5">Total: </td>
+
+                        <td>¥14064.00</td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="pt-2 bg-white pb-3">
+                    <a href="#" class="">继续购物</a>
+                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span>共2件商品，已选择1件</span>
+                    <button class="btn-danger px-5 float-right">结算</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+</div>
+<div class="bg-white text-center pb-5 pt-3">
+    <p class="font_size m-0 ">小米商城|MIUI|米聊|多看书城|小米路由器|视频电话|小米天猫店|小米淘宝直营店|小米网盟|小米移动|隐私政策|Select Region</p>
+    <p class="font_size m-2 ">©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</p>
+    <p class="font_size m-2 mb-5">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+</div>
+<script>
+    (function(){
+        /*点上边的全选，操作下边的所有checkbox*/
+//DOM 4步:
+//1. 查找触发事件的元素
+//--查找table下的thead下的唯一的input
+        var chbAll=document.querySelector(
+                "table>thead input"
+        );
+//--查找table下tbody下的所有input
+        var chbs=document.querySelectorAll(
+                "table>tbody input"
+        );
+//2. 绑定事件处理函数
+        chbAll.onclick=function(){
+            var chbAll=this;//获得当前单击的chbAll
+            //3. 查找要修改的元素
+            //--直接使用外部查找过的chbs
+            //4. 修改元素
+            //--遍历chbs中每个chb
+            for(var chb of chbs){
+                //每遍历一个chb就让他的checked属性和chbAll的checked保持一致
+                chb.checked=chbAll.checked;
+            }
+        }
+
+        /*点下边的每个chb，都可能影响上边的chb*/
+//DOM 4步:
+//1. 查找触发事件的元素
+//--前边已经找过chbs了,可直接使用
+//2. 绑定事件处理函数
+//--遍历chbs中每个chb
+        for(var chb of chbs){
+            //--每遍历一个chb就绑定单击事件
+            chb.onclick=function(){
+                //3. 查找要修改的元素
+                //--已经找过chbAll了,可直接使用
+                //4. 修改元素
+                //先获得当前chb
+                var chb=this;
+                //如果当前chb取消选中
+                if(chb.checked==false){
+                    //则chbAll一定不全选
+                    chbAll.checked=false;
+                }else{
+                    //先查找tbody下一个未选中的input
+                    var unchecked=
+                            document.querySelector(
+                                    "table>tbody input:not(:checked)"
+                            )
+                    //找不到未选中的chb了
+                    if(unchecked==null){
+                        //才全选
+                        chbAll.checked=true;
+                    }
+                }
+            }
+        }
+    })()
+</script>
+<script>
+    //做所有DOM操作的4步
+    //1. 先找到触发事件的所有元素
+    //2. 为元素绑定事件处理函数
+    //  3. 查找要修改的元素
+    //  4. 修改元素
+
+    //1. 先找到触发事件的元素: table中的所有button
+    //--先找到id为data的table
+    var table=
+            document.getElementById("data");
+    //--再在table内找button元素
+    var btns=
+            table.getElementsByTagName("button")
+    console.log(table);
+    console.log(btns);//6个
+    //2. 为每个button绑定单击事件处理函数
+    //--遍历类数组对象btns中每个按钮
+    for(var btn of btns){
+//--每遍历一个按钮，就为其绑定单击事件处理函数
+        btn.onclick=function(){
+            //所有事件处理函数中的this，永远指.前的当前元素对象
+            var btn=this;
+            //3. 查找要修改的元素
+            //--查找按钮的父元素下的第二个子元素
+            var span=
+                    btn.parentNode.children[1];
+            //4. 修改元素
+            //--获得span的内容n，转为整数
+            //强调: 凡是从页面上获得的，都是字符串。做算术计算前必须先转为数字，再计算。
+            var n=
+                    parseInt(span.innerHTML);
+            //--如果btn的内容是+
+            if(btn.innerHTML=="+"){
+                n++;//n就+1
+            }else if(n>1){
+                //--否则如果n的内容>1，才能-1
+                n--;
+            }
+            //--最后将修改后的n，放回span
+            span.innerHTML=n;
+
+            /*计算小计*/
+            //先获得btn的父元素td
+            var td=btn.parentNode;
+            //单价=td的前一个兄弟元素的内容，去掉¥，转为小数
+            var price=parseFloat(
+                    td.previousElementSibling
+                            .innerHTML.slice(1)
+            );
+            //小计=单价*数量n
+            var subTotal=price*n;
+            //将小计放入td的下一个兄弟的内容中，前加¥，保留两位小数
+            td.nextElementSibling
+                    .innerHTML=`¥${subTotal.toFixed(2)}`;
+
+            /*计算总计*/
+            //--查找tbody下每行最后一个td
+            var tds=
+                    table.querySelectorAll(
+                            "tbody td:last-child"
+                    );
+            var total=0;
+            //--遍历tds中每个td
+            for(var td of tds){
+                total+=parseFloat(
+                        td.innerHTML.slice(1)
+                );
+            }
+            //--将total放入tfoot下最后一个td中
+            table.querySelector(
+                    "tfoot td:last-child"
+            ).innerHTML=`¥${total.toFixed(2)}`;
+        }
+    }//外部的btn指向最后一个btn
+</script>
+</body>
+</html>
